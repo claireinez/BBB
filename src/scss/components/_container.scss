@@ -1,0 +1,8 @@
+.topic {
+	height: 100vh;
+	background-color: $black20;
+	@include respond(smaller){};
+	@include respond(large){};
+	@include respond(med){};
+	@include centerer;
+}

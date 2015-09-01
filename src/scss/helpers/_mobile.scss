@@ -1,0 +1,36 @@
+/*
+* MEDIA QUERIES MIXIN
+* DESCRIPTION: Responsive Breakpoints
+*/
+
+$small: 500px;
+$med: 800px;
+$large: 1000px;
+
+@mixin respond($size) {
+	@if $size == smaller {
+		@media (max-width: $small) {
+			@content;
+			width: 100%;
+		}
+	}
+	@else if $size == med {
+		@media (max-width: $med) and (min-width: $small) {
+			@content;
+			width: 80%;
+		}
+	}
+	@else if $size == large {
+		@media (min-width: $med) {
+			@content;
+			width: 60%;
+		}
+	}
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
