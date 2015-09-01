@@ -1,0 +1,12 @@
+/*
+ * MAIN SCSS FILE
+ * Desription: Include all stylesheets here for mapping to css
+ */
+
+@media screen {
+	@import
+			"base/colors",
+			"helpers/mobile",
+			"components/container"
+	;
+}
